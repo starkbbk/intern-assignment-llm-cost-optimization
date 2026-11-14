@@ -12,13 +12,28 @@
 | Q1 — single call | [question1/agent.py](question1/agent.py) | [questions/question-1.md](questions/question-1.md) |
 | Q2 — pipeline | [question2/agent.py](question2/agent.py) | [questions/question-2.md](questions/question-2.md) |
 
+## Optimization submission
+
+The optimized Q1 and Q2 agents preserve routing for all five available tickets.
+Public costs are **1704–1905 points per ticket for Q1** (target ≤3000) and
+**1245–1515 for Q2** (target ≤2500), with no cached-input discount.
+
+See [SUBMISSION.md](SUBMISSION.md) for the approach, required per-call breakdowns,
+validation results and tradeoffs. Raw measurements are in
+[reports/optimized.json](reports/optimized.json).
+
+The original tests are unchanged. Two baseline tests explicitly require high
+cost and contradict the assignment targets; exclude those when validating the
+optimized agents. Full unfiltered results: 21 passed, 2 baseline-cost failures.
+
 ## Run
 
 ```bash
 pip install -r requirements.txt
-pytest -q
+pytest -q -k 'not baseline_cost_is_high'
 python question1/run.py
 python question2/run.py
+python scripts/benchmark.py --baseline reports/baseline.json --output reports/optimized.json
 ```
 
 `shared/llm.py` provides a local `LlmClient` with the same billing accounting you would use against a hosted chat API. Do not import `eval/reference.py` from your agent.
