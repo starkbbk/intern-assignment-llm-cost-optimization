@@ -1,0 +1,204 @@
+{
+  "runtime": {
+    "python": "3.12.14",
+    "tiktoken": "0.14.0"
+  },
+  "measurement": "Fresh agent and CostSession per ticket; no cached-prefix discount.",
+  "tracks": {
+    "question1": [
+      {
+        "ticket_id": "T-1001",
+        "action": "REFUND",
+        "kb_article": "returns-within-30-days",
+        "points": 1905,
+        "target": 3000,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 405,
+            "uncached_input_tokens": 405,
+            "cached_input_tokens": 0,
+            "output_tokens": 46,
+            "points": 1905
+          }
+        ],
+        "baseline_points": 8862,
+        "reduction_percent": 78.5
+      },
+      {
+        "ticket_id": "T-1002",
+        "action": "SEND_ARTICLE",
+        "kb_article": "digital-license-no-refund",
+        "points": 1782,
+        "target": 3000,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 399,
+            "uncached_input_tokens": 399,
+            "cached_input_tokens": 0,
+            "output_tokens": 39,
+            "points": 1782
+          }
+        ],
+        "baseline_points": 8796,
+        "reduction_percent": 79.74
+      },
+      {
+        "ticket_id": "T-1003",
+        "action": "ESCALATE_TIER2",
+        "kb_article": "custom-items-no-replace",
+        "points": 1743,
+        "target": 3000,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 386,
+            "uncached_input_tokens": 386,
+            "cached_input_tokens": 0,
+            "output_tokens": 39,
+            "points": 1743
+          }
+        ],
+        "baseline_points": 8751,
+        "reduction_percent": 80.08
+      },
+      {
+        "ticket_id": "T-1004",
+        "action": "REPLACE",
+        "kb_article": "damage-replacement-7-days",
+        "points": 1704,
+        "target": 3000,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 388,
+            "uncached_input_tokens": 388,
+            "cached_input_tokens": 0,
+            "output_tokens": 36,
+            "points": 1704
+          }
+        ],
+        "baseline_points": 8892,
+        "reduction_percent": 80.84
+      },
+      {
+        "ticket_id": "T-1091",
+        "action": "SEND_ARTICLE",
+        "kb_article": "subscription-cooling-off",
+        "points": 1746,
+        "target": null,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 392,
+            "uncached_input_tokens": 392,
+            "cached_input_tokens": 0,
+            "output_tokens": 38,
+            "points": 1746
+          }
+        ],
+        "baseline_points": 8760,
+        "reduction_percent": 80.07
+      }
+    ],
+    "question2": [
+      {
+        "ticket_id": "T-1001",
+        "action": "REFUND",
+        "kb_article": "returns-within-30-days",
+        "points": 1515,
+        "target": 2500,
+        "calls": [
+          {
+            "label": "compose",
+            "input_tokens": 275,
+            "uncached_input_tokens": 275,
+            "cached_input_tokens": 0,
+            "output_tokens": 46,
+            "points": 1515
+          }
+        ],
+        "baseline_points": 73401,
+        "reduction_percent": 97.94
+      },
+      {
+        "ticket_id": "T-1002",
+        "action": "SEND_ARTICLE",
+        "kb_article": "digital-license-no-refund",
+        "points": 1284,
+        "target": 2500,
+        "calls": [
+          {
+            "label": "compose",
+            "input_tokens": 233,
+            "uncached_input_tokens": 233,
+            "cached_input_tokens": 0,
+            "output_tokens": 39,
+            "points": 1284
+          }
+        ],
+        "baseline_points": 73245,
+        "reduction_percent": 98.25
+      },
+      {
+        "ticket_id": "T-1003",
+        "action": "ESCALATE_TIER2",
+        "kb_article": "custom-items-no-replace",
+        "points": 1245,
+        "target": 2500,
+        "calls": [
+          {
+            "label": "compose",
+            "input_tokens": 220,
+            "uncached_input_tokens": 220,
+            "cached_input_tokens": 0,
+            "output_tokens": 39,
+            "points": 1245
+          }
+        ],
+        "baseline_points": 72990,
+        "reduction_percent": 98.29
+      },
+      {
+        "ticket_id": "T-1004",
+        "action": "REPLACE",
+        "kb_article": "damage-replacement-7-days",
+        "points": 1314,
+        "target": 2500,
+        "calls": [
+          {
+            "label": "compose",
+            "input_tokens": 258,
+            "uncached_input_tokens": 258,
+            "cached_input_tokens": 0,
+            "output_tokens": 36,
+            "points": 1314
+          }
+        ],
+        "baseline_points": 73386,
+        "reduction_percent": 98.21
+      },
+      {
+        "ticket_id": "T-1091",
+        "action": "SEND_ARTICLE",
+        "kb_article": "subscription-cooling-off",
+        "points": 1269,
+        "target": null,
+        "calls": [
+          {
+            "label": "compose",
+            "input_tokens": 233,
+            "uncached_input_tokens": 233,
+            "cached_input_tokens": 0,
+            "output_tokens": 38,
+            "points": 1269
+          }
+        ],
+        "baseline_points": 73551,
+        "reduction_percent": 98.27
+      }
+    ]
+  },
+  "baseline_source_commit": "d9989e294615046519a1658ff76c4343f465fb0c"
+}

@@ -1,0 +1,264 @@
+{
+  "source_commit": "d9989e294615046519a1658ff76c4343f465fb0c",
+  "tracks": {
+    "question1": [
+      {
+        "ticket_id": "T-1001",
+        "action": "REFUND",
+        "kb_article": "returns-within-30-days",
+        "points": 8862,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 524,
+            "cached_input_tokens": 0,
+            "output_tokens": 486,
+            "points": 8862
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1002",
+        "action": "SEND_ARTICLE",
+        "kb_article": "digital-license-no-refund",
+        "points": 8796,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 522,
+            "cached_input_tokens": 0,
+            "output_tokens": 482,
+            "points": 8796
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1003",
+        "action": "ESCALATE_TIER2",
+        "kb_article": "custom-items-no-replace",
+        "points": 8751,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 507,
+            "cached_input_tokens": 0,
+            "output_tokens": 482,
+            "points": 8751
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1004",
+        "action": "REPLACE",
+        "kb_article": "damage-replacement-7-days",
+        "points": 8892,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 509,
+            "cached_input_tokens": 0,
+            "output_tokens": 491,
+            "points": 8892
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1091",
+        "action": "SEND_ARTICLE",
+        "kb_article": "subscription-cooling-off",
+        "points": 8760,
+        "calls": [
+          {
+            "label": "handle_ticket",
+            "input_tokens": 515,
+            "cached_input_tokens": 0,
+            "output_tokens": 481,
+            "points": 8760
+          }
+        ]
+      }
+    ],
+    "question2": [
+      {
+        "ticket_id": "T-1001",
+        "action": "REFUND",
+        "kb_article": "returns-within-30-days",
+        "points": 73401,
+        "calls": [
+          {
+            "label": "triage",
+            "input_tokens": 8455,
+            "cached_input_tokens": 0,
+            "output_tokens": 482,
+            "points": 32595
+          },
+          {
+            "label": "retrieve",
+            "input_tokens": 590,
+            "cached_input_tokens": 0,
+            "output_tokens": 46,
+            "points": 2460
+          },
+          {
+            "label": "compose",
+            "input_tokens": 1181,
+            "cached_input_tokens": 0,
+            "output_tokens": 491,
+            "points": 10908
+          },
+          {
+            "label": "audit",
+            "input_tokens": 6716,
+            "cached_input_tokens": 0,
+            "output_tokens": 486,
+            "points": 27438
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1002",
+        "action": "SEND_ARTICLE",
+        "kb_article": "digital-license-no-refund",
+        "points": 73245,
+        "calls": [
+          {
+            "label": "triage",
+            "input_tokens": 8449,
+            "cached_input_tokens": 0,
+            "output_tokens": 492,
+            "points": 32727
+          },
+          {
+            "label": "retrieve",
+            "input_tokens": 603,
+            "cached_input_tokens": 0,
+            "output_tokens": 39,
+            "points": 2394
+          },
+          {
+            "label": "compose",
+            "input_tokens": 1188,
+            "cached_input_tokens": 0,
+            "output_tokens": 483,
+            "points": 10809
+          },
+          {
+            "label": "audit",
+            "input_tokens": 6705,
+            "cached_input_tokens": 0,
+            "output_tokens": 480,
+            "points": 27315
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1003",
+        "action": "ESCALATE_TIER2",
+        "kb_article": "custom-items-no-replace",
+        "points": 72990,
+        "calls": [
+          {
+            "label": "triage",
+            "input_tokens": 8436,
+            "cached_input_tokens": 0,
+            "output_tokens": 480,
+            "points": 32508
+          },
+          {
+            "label": "retrieve",
+            "input_tokens": 590,
+            "cached_input_tokens": 0,
+            "output_tokens": 39,
+            "points": 2355
+          },
+          {
+            "label": "compose",
+            "input_tokens": 1151,
+            "cached_input_tokens": 0,
+            "output_tokens": 481,
+            "points": 10668
+          },
+          {
+            "label": "audit",
+            "input_tokens": 6678,
+            "cached_input_tokens": 0,
+            "output_tokens": 495,
+            "points": 27459
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1004",
+        "action": "REPLACE",
+        "kb_article": "damage-replacement-7-days",
+        "points": 73386,
+        "calls": [
+          {
+            "label": "triage",
+            "input_tokens": 8441,
+            "cached_input_tokens": 0,
+            "output_tokens": 491,
+            "points": 32688
+          },
+          {
+            "label": "retrieve",
+            "input_tokens": 601,
+            "cached_input_tokens": 0,
+            "output_tokens": 36,
+            "points": 2343
+          },
+          {
+            "label": "compose",
+            "input_tokens": 1172,
+            "cached_input_tokens": 0,
+            "output_tokens": 491,
+            "points": 10881
+          },
+          {
+            "label": "audit",
+            "input_tokens": 6698,
+            "cached_input_tokens": 0,
+            "output_tokens": 492,
+            "points": 27474
+          }
+        ]
+      },
+      {
+        "ticket_id": "T-1091",
+        "action": "SEND_ARTICLE",
+        "kb_article": "subscription-cooling-off",
+        "points": 73551,
+        "calls": [
+          {
+            "label": "triage",
+            "input_tokens": 8445,
+            "cached_input_tokens": 0,
+            "output_tokens": 492,
+            "points": 32715
+          },
+          {
+            "label": "retrieve",
+            "input_tokens": 611,
+            "cached_input_tokens": 0,
+            "output_tokens": 38,
+            "points": 2403
+          },
+          {
+            "label": "compose",
+            "input_tokens": 1183,
+            "cached_input_tokens": 0,
+            "output_tokens": 491,
+            "points": 10914
+          },
+          {
+            "label": "audit",
+            "input_tokens": 6708,
+            "cached_input_tokens": 0,
+            "output_tokens": 493,
+            "points": 27519
+          }
+        ]
+      }
+    ]
+  }
+}

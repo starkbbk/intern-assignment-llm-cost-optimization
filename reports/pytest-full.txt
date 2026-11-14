@@ -1,0 +1,31 @@
+...................F..F                                                  [100%]
+=================================== FAILURES ===================================
+__________________________ test_baseline_cost_is_high __________________________
+
+    def test_baseline_cost_is_high():
+        copilot = SupportCopilot()
+        for tid in PUBLIC:
+            copilot.handle_ticket(tid)
+>       assert copilot.session.total_points() > 15_000
+E       assert 7134 > 15000
+E        +  where 7134 = total_points()
+E        +    where total_points = CostSession(calls=[LlmCall(label='handle_ticket', prompt='SYSTEM:\nYou are ShopAssist. Use order facts and policy to r...ticle": "damage-replacement-7-days",\n  "customer_reply": "A replacement is on the way."\n}', cached_prefix_tokens=0)]).total_points
+E        +      where CostSession(calls=[LlmCall(label='handle_ticket', prompt='SYSTEM:\nYou are ShopAssist. Use order facts and policy to r...ticle": "damage-replacement-7-days",\n  "customer_reply": "A replacement is on the way."\n}', cached_prefix_tokens=0)]) = <question1.agent.SupportCopilot object at 0x1085f3170>.session
+
+tests/test_question1.py:30: AssertionError
+__________________________ test_baseline_cost_is_high __________________________
+
+    def test_baseline_cost_is_high():
+        pipe = SupportPipeline()
+        pipe.handle_ticket(PUBLIC[0])
+>       assert pipe.session.total_points() > 70_000
+E       assert 1515 > 70000
+E        +  where 1515 = total_points()
+E        +    where total_points = CostSession(calls=[LlmCall(label='compose', prompt='SYSTEM:\nYou are ShopAssist. Apply the supplied policy to the orde...s",\n  "customer_reply": "We approved your refund; you\'ll see it in 3-5 business days."\n}', cached_prefix_tokens=0)]).total_points
+E        +      where CostSession(calls=[LlmCall(label='compose', prompt='SYSTEM:\nYou are ShopAssist. Apply the supplied policy to the orde...s",\n  "customer_reply": "We approved your refund; you\'ll see it in 3-5 business days."\n}', cached_prefix_tokens=0)]) = <question2.agent.SupportPipeline object at 0x10861fc80>.session
+
+tests/test_question2.py:27: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_question1.py::test_baseline_cost_is_high - assert 7134 > 15000
+FAILED tests/test_question2.py::test_baseline_cost_is_high - assert 1515 > 70000
+2 failed, 21 passed in 104.78s (0:01:44)
